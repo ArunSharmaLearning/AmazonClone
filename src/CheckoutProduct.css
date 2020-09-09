@@ -1,0 +1,33 @@
+.checkoutProduct
+{
+    display: flex;
+    padding:0;
+    margin-bottom: 2rem;
+}
+.checkoutProduct_img
+{
+    width: 12rem;
+    height:12rem;
+}
+.checkoutProduct_info
+{
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+}
+.checkoutProduct_qnt
+{
+    display: inline;
+}
+.checkoutProduct_qnt > input
+{
+    max-width: 3rem;
+
+}
+.checkoutProduct_info > button{
+    background: #f0c14b;
+    
+}
+.checkoutProduct_tittle
+{
+    font-weight: 500;
+}
