@@ -1,9 +1,9 @@
 .login{
-    background-color: white;
+    background-color: black;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
 }
 .login_logo
 {
@@ -19,7 +19,7 @@
     margin-left: auto;
     display: flex;
     flex-direction: column;
-    border:1px solid lightgray;
+    border:1px solid indianred;
     padding: 20px;
 }
 .login_container > h1{
