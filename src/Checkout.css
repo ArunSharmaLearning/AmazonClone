@@ -22,3 +22,17 @@
 {
     width: 100%;
 }
+.subtotal
+{
+    right: 0;
+}
+
+@media only screen and (max-width: 762px) {
+.subtotal
+{
+    left: 0;
+}
+.checkout{
+    flex-direction: column;
+}
+}

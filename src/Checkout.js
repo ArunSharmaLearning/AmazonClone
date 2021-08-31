@@ -3,11 +3,70 @@ import { useStateValue } from "./StateProvider"
 import "./Checkout.css"
 import CheckoutProduct from "./CheckoutProduct"
 import Subtotal from "./Subtotal"
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+
+
+
+
+
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+
+
 
 function Checkout() {
-    const [{basket}] = useStateValue()
+    const [{basket} , dispatch] = useStateValue()
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClick = () => {
+        setOpen(true);
+      };
+
+
+      const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setOpen(false);
+      };
+
+
+
+    const removefromBasket= (props) =>
+        {
+
+            console.log("props" , props)
+            handleClick();
+            
+            dispatch(
+                {
+                    type:"REMOVE_FROM_BASKET",
+                    id:props
+
+                }
+
+                )
+
+                
+                // history.push("/");
+        }
+
+
+    
     return (
         <div className="checkout">
+            
+<Snackbar anchorOrigin={{vertical:'bottom',horizontal: 'right' }} open={open} autoHideDuration={1000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="warning">
+         Remove from Cart
+        </Alert>
+      </Snackbar>
+
+
             <div className="checkout_left">
 
         
@@ -24,7 +83,7 @@ function Checkout() {
                      basket.map(item => {
                        
                         return(
-                         <CheckoutProduct item={item}/>)
+                         <CheckoutProduct remove = {removefromBasket} item={item}/>)
                      })
                  }
              

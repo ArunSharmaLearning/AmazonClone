@@ -1,30 +1,22 @@
+
 import React ,{useState , useEffect} from 'react'
+import { useHistory } from 'react-router-dom'
 import "./CheckoutProduct.css"
 import {useStateValue} from "./StateProvider"
+import Button from '@material-ui/core/Button';
+
 function CheckoutProduct(props) {
     const [{basket} , dispatch] = useStateValue()
     const [num , setnum] = useState(props.item.quantity)
-    console.log(basket)
-    const removefromBasket= () =>
-        {
-            
-            dispatch(
-                {
-                    type:"REMOVE_FROM_BASKET",
-                    id:props.item.id
+    const history = useHistory()
 
-                }
-            )
-        }
+    
+    useEffect(()=>
+    {   
+        setnum(props.item.quantity)
 
-        const val=(e)=>
-        {
-                if(e.target.value < 1 && e.target.value !== ""){ return (1) }  else { return(setnum(e.target.value))}
-
-           
-        }
-        useEffect(() => {
-            
+    },[basket])
+    useEffect(() => {
             dispatch(
                 {
                     type:"QUANTITY",
@@ -35,6 +27,16 @@ function CheckoutProduct(props) {
 
 
         }, [num])
+
+        
+    
+        const val=(e)=>
+        {
+            
+                if(e.target.value < 1 && e.target.value !== ""){ return (1) }  else {(setnum(e.target.value))}
+
+        
+        }
         
         
     return (
@@ -61,7 +63,7 @@ function CheckoutProduct(props) {
                         
                             </div>
                         </div>
-                        <button onClick={removefromBasket}>Remove</button>
+                        <Button onClick={()=> props.remove(props.item.id)}>Remove</Button>
             </div>
 
             

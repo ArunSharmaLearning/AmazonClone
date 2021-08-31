@@ -15,6 +15,15 @@
 {
     width: 100%;
     mask-image: linear-gradient(to bottom , rgba(0,0,0,1) , rgba(0,0,0,0));
-    margin-bottom: -150px;
+    margin-bottom: -7rem;
     
+}
+@media only screen and (max-width: 762px) {
+
+    .home_image
+    {
+        /* width: 120%; */
+        margin-bottom: -3rem;
+    }
+
 }

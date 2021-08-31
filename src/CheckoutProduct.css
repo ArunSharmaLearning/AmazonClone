@@ -13,10 +13,12 @@
 {
     padding-left: 0.5rem;
     padding-top: 0.1rem;
+    padding: 1.5rem;
 }
 .checkoutProduct_qnt
 {
-    display: inline;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 .checkoutProduct_qnt > input
 {

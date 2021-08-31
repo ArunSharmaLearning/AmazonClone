@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { StateProvider } from "./StateProvider"
+import {StripeProvider} from 'react-stripe-elements';
 import reducer ,{ initialState } from './reducer';
 
 ReactDOM.render(
     <StateProvider initialState = {initialState} reducer={reducer}>
-    <App/>
+      <StripeProvider apiKey="pk_test_12345">
+        <App/>
+      </StripeProvider>
     </StateProvider>,
   document.getElementById('root')
 );

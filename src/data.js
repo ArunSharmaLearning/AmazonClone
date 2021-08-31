@@ -2,20 +2,19 @@
 const data =[
     {
             id:"1",
-            title:" products for your Laptop",
+            title:"HP I7core Laptop",
             price:13.5,
              rating:5,
              quantity:1,
              image:"https://images-eu.ssl-images-amazon.com/images/G/31/img20/CEPC/Covid19/Dashboard/WFH2_GW_DC_379x304._SY304_CB431287285_.jpg"
-    },
-    {
+    },{
         id:"2",
-         title:"products for your baby",
-         price:3.5,
-          rating:5,
-          quantity:1,
-         image:"https://images-eu.ssl-images-amazon.com/images/G/31/img19/Baby/GW/Desktop/DesktopQC_NB_1X._SY116_CB448757679_.jpg"
-    },
+        title:"DFOODS All Natural Peanut Butter",
+        price:10,
+         rating:3,
+         quantity:1,
+         image:"https://m.media-amazon.com/images/I/71dSWX3qZ9L._AC_SX480_SY360_.jpg"
+},
     {
         id:"3",
         title:"DSLR camera",

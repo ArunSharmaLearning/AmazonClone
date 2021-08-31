@@ -17,7 +17,7 @@ function reducer(state , action){
             }
             break
             case "ADD_TO_SEARCH":
-                console.log("OK")
+            
             return {
                 ...state , search:action.search
             }
@@ -25,6 +25,7 @@ function reducer(state , action){
             case "QUANTITY":
                 let newBasket = [...state.basket]
             const index = newBasket.findIndex((basketItem) => basketItem.id === action.id)
+            if(index!=-1)
               newBasket[index].quantity=action.value
               
                 return{                    
@@ -44,9 +45,6 @@ function reducer(state , action){
             
             
               Bask[flag].quantity++
-              
-              console.log("Here")
-              console.log(Bask)
               return{                    
                 ...state , 
             basket :  Bask
@@ -56,9 +54,12 @@ function reducer(state , action){
         break
         case "REMOVE_FROM_BASKET":
             let newBasket1 = [...state.basket]
-            const index1 = newBasket1.findIndex((basketItem) => basketItem.id === action.id)
+            const index1 = newBasket1.findIndex((basketItem) =>{ 
+                return((basketItem.id) === action.id)
+            })      
             newBasket1.splice(index1,1)
-            return { ...state , basket: newBasket1}
+            
+            return { ...state  ,  basket:newBasket1}
             break
             default:
 

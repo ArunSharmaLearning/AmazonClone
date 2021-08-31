@@ -3,15 +3,13 @@ import firebase from "firebase"
 const firebaseApp = firebase.initializeApp(
     {
        
-            apiKey: "AIzaSyBxw3da7mnhxztgfHyu8yRbLGmmTd7mIdc",
-            authDomain: "commerce-ad2b0.firebaseapp.com",
-            databaseURL: "https://commerce-ad2b0.firebaseio.com",
-            projectId: "commerce-ad2b0",
-            storageBucket: "commerce-ad2b0.appspot.com",
-            messagingSenderId: "1077189075895",
-            appId: "1:1077189075895:web:a6fce5070993321ab3be32",
-            measurementId: "G-H5Z9EREL5Q"
-          
+        apiKey: "AIzaSyDKmQD3V14jXmG8zHDIbqrsC3zD2Tzob3g",
+        authDomain: "clone-f2b29.firebaseapp.com",
+        projectId: "clone-f2b29",
+        storageBucket: "clone-f2b29.appspot.com",
+        messagingSenderId: "925141906749",
+        appId: "1:925141906749:web:1553841af178a0d52ac154",
+        measurementId: "G-EE2G68EYQD"
         
     }
 )

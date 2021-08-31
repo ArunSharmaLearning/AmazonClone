@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React ,{useEffect, useState} from 'react'
 import "./Header.css"
 import { Link } from "react-router-dom"
 import SearchIcon from '@material-ui/icons/Search';
@@ -10,15 +10,18 @@ function Header() {
     const [{basket, user,search},dispatch] = useStateValue()
     const [searc , setsearc] =useState("")
     
-    
-    function find()
+    useEffect(()=>
     {
+            
         dispatch({
             type:"ADD_TO_SEARCH",
             search:{searc}
 
         })
-    }
+        
+        
+    } , [searc])
+
     return (
         <nav className="header">
             <Link to="/">
@@ -28,7 +31,7 @@ function Header() {
 
             <div className="header_search">
             <input type="text" value={searc} onChange={(e)=> setsearc(e.target.value)} className="header_searchInput" />
-            <SearchIcon onClick={find} className="header_searchIcon"/>
+            <SearchIcon className="header_searchIcon"/>
             </div>
             
             <div className="header_nav">
@@ -39,19 +42,7 @@ function Header() {
                     </div>
                 </Link>
 
-                <Link to="/" className="header_link">
-                    <div className="header_option">
-                    <span className="header_optionLineOne">Returns</span>
-                    <span className="header_optionLineTwo">& Orders</span>
-                    </div>
-                </Link>
-
-                <Link to="/" className="header_link">
-                    <div className="header_option">
-                    <span className="header_optionLineOne">Your</span>
-                    <span className="header_optionLineTwo">Returns</span>
-                    </div>
-                </Link>
+        
 
                 <Link to="/checkout" className="header_link">
                     <div className="header_optionBasket">
