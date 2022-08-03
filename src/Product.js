@@ -30,7 +30,7 @@ function Product(props) {
 
             <div className="product_info">
             <p>{props.title}</p>
-            <p className="product_price">{props.price}</p>
+            <p className="product_price">{props.price} $</p>
             <div className="product_rating">
                 {
                     Array(props.rating)

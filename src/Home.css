@@ -1,8 +1,8 @@
 .home
 {
-    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
+    height: auto;
 }
 .home_row{
     display: flex;
@@ -14,8 +14,8 @@
 .home_image
 {
     width: 100%;
-    mask-image: linear-gradient(to bottom , rgba(0,0,0,1) , rgba(0,0,0,0));
-    margin-bottom: -7rem;
+    -webkit-mask-image: linear-gradient(to bottom , rgba(0,0,0,1) , rgba(0,0,0,0));
+    margin-bottom: -10rem;
     
 }
 @media only screen and (max-width: 762px) {

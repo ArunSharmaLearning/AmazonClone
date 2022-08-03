@@ -1,6 +1,7 @@
 {
   "name": "online",
   "version": "0.1.0",
+  "homepage": "https://arunsharmalearning.github.io/AmazonClone/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -13,6 +14,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
     "firebase": "^4.8.0",
+    "gh-pages": "^3.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -23,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

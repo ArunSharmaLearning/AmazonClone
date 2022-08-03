@@ -1,38 +1,37 @@
-.checkout
-{
-   
+.checkout {
     display: flex;
     padding: 20px;
     background-color: white;
     height: max-content;
-    
 }
-.checkout_ad
-{
-    width:100%;
-    height:8rem;
 
+.checkout_ad {
+    width: 100%;
+    height: 8rem;
+    cursor: pointer;
 }
-.checkout_title{
+
+.checkout_title {
     margin-top: 10px;
-    padding:10px;
+    padding: 10px;
     border: 1px solid lightgray;
+    margin-bottom: 2rem;
 }
-.checkout_left
-{
+
+.checkout_left {
     width: 100%;
 }
-.subtotal
-{
+
+.subtotal {
     right: 0;
 }
 
 @media only screen and (max-width: 762px) {
-.subtotal
-{
-    left: 0;
-}
-.checkout{
-    flex-direction: column;
-}
+    .subtotal {
+        left: 0;
+    }
+
+    .checkout {
+        flex-direction: column;
+    }
 }

@@ -22,7 +22,7 @@
 }
 .checkoutProduct_qnt > input
 {
-    max-width: 3rem;
+    width: 2rem;
 
 }
 .checkoutProduct_info > button{
